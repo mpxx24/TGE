@@ -14,7 +14,7 @@ namespace Localization.Helpers {
         /// <param name="width">The width.</param>
         /// <param name="isRoom">if set to <c>true</c> [is room].</param>
         /// <returns></returns>
-        private static char[,] CreateMap(int height, int width, bool isRoom) {
+        public static char[,] CreateMap(int height, int width, bool isRoom) {
             var map = new char[height, width];
 
             if (!isRoom) {
@@ -37,22 +37,21 @@ namespace Localization.Helpers {
                 }
             }
 
+            map[3, 3] = 'M';
+
             return map;
         }
 
         /// <summary>
-        ///     Gets the map.
+        /// Gets the map.
         /// </summary>
-        /// <param name="height">The height.</param>
-        /// <param name="width">The width.</param>
-        /// <param name="isRoom">if set to <c>true</c> [is room].</param>
+        /// <param name="map">The map.</param>
         /// <returns></returns>
-        public static string GetMap(int height, int width, bool isRoom) {
-            var map = CreateMap(height, width, isRoom);
+        public static string GetMapAsString(char[,] map) {
             var result = new StringBuilder();
 
-            for (var i = 0; i < height; i++) {
-                for (var j = 0; j < width; j++) {
+            for (var i = 0; i < map.GetLength(0); i++) {
+                for (var j = 0; j < map.GetLength(1); j++) {
                     result.Append(map[i, j]);
                 }
                 result.Append(Environment.NewLine);
@@ -61,5 +60,4 @@ namespace Localization.Helpers {
             return result.ToString();
         }
     }
-
 }

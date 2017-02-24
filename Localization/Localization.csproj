@@ -41,8 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\Creator.cs" />
-    <Compile Include="Interfaces\ILocalization.cs" />
-    <Compile Include="MainClasses\Localization.cs" />
+    <Compile Include="Helpers\Direction.cs" />
+    <Compile Include="Helpers\MapUpdater.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

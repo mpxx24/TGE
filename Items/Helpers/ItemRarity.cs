@@ -5,7 +5,7 @@ namespace Items.Helpers {
     /// <summary>
     ///     Class representing <see cref="Item"></see> rarity
     /// </summary>
-    public static class ItemRarity {
+    public class ItemRarity {
         public enum Rarity {
             Normal = 0,
 

@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\MainCharacterHelper.cs" />
     <Compile Include="Interfaces\ICharacters.cs" />
     <Compile Include="MainClasses\Character.cs" />
     <Compile Include="MainClasses\Monster.cs" />
@@ -47,9 +48,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainClasses\RaidBoss.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Helpers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Items\Items.csproj">
       <Project>{58375040-180d-4344-9a0f-eb7a936f0075}</Project>
