@@ -40,16 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\Map.cs" />
     <Compile Include="Helpers\Creator.cs" />
     <Compile Include="Helpers\Direction.cs" />
     <Compile Include="Helpers\MapUpdater.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\Characters\Characters.csproj">
-      <Project>{b48f9a78-ecd7-4bf1-afc2-922066368515}</Project>
-      <Name>Characters</Name>
+    <ProjectReference Include="..\GameEngine.Core\GameEngine.Core.csproj">
+      <Project>{48cdee5e-d502-44c4-bda9-ef23062926bd}</Project>
+      <Name>GameEngine.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

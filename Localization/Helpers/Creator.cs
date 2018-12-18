@@ -14,30 +14,32 @@ namespace Localization.Helpers {
         /// <param name="width">The width.</param>
         /// <param name="isRoom">if set to <c>true</c> [is room].</param>
         /// <returns></returns>
-        public static char[,] CreateMap(int height, int width, bool isRoom) {
-            var map = new char[height, width];
+        public static Map CreateMap(int height, int width, bool isRoom) {
+            var map = new Map();
+
+            var mapTable = new char[height, width];
 
             if (!isRoom) {
                 for (var i = 0; i < height; i++) {
                     for (var j = 0; j < width; j++) {
-                        map[i, j] = '#';
+                        mapTable[i, j] = '#';
                     }
                 }
             }
             else {
                 for (var i = 0; i < height; i++) {
                     for (var j = 0; j < width; j++) {
-                        if (i == 1 || i == (height - 1) || j == 0 || j == (width - 1)) {
-                            map[i, j] = '#';
+                        if (i == 0 || i == (height - 1) || j == 0 || j == (width - 1)) {
+                            mapTable[i, j] = '#';
                         }
                         else {
-                            map[i, j] = '-';
+                            mapTable[i, j] = ' ';
                         }
                     }
                 }
             }
 
-            map[3, 3] = 'M';
+            map.MapTable = mapTable;
 
             return map;
         }
@@ -47,16 +49,16 @@ namespace Localization.Helpers {
         /// </summary>
         /// <param name="map">The map.</param>
         /// <returns></returns>
-        public static string GetMapAsString(char[,] map) {
+        public static string GetMapAsString(Map map) {
             var result = new StringBuilder();
 
-            for (var i = 0; i < map.GetLength(0); i++) {
-                for (var j = 0; j < map.GetLength(1); j++) {
-                    result.Append(map[i, j]);
+            for (var i = 0; i < map.MapTable.GetLength(0); i++) {
+                for (var j = 0; j < map.MapTable.GetLength(1); j++) {
+                    result.Append(map.MapTable[i, j]);
                 }
                 result.Append(Environment.NewLine);
             }
-
+            
             return result.ToString();
         }
     }
