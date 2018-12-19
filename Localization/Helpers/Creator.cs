@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using GameEngine.Core.Helpers;
 
 namespace Localization.Helpers {
 
@@ -22,7 +23,7 @@ namespace Localization.Helpers {
             if (!isRoom) {
                 for (var i = 0; i < height; i++) {
                     for (var j = 0; j < width; j++) {
-                        mapTable[i, j] = '#';
+                        mapTable[i, j] = ApplicationSettings.WallMapCharacter;
                     }
                 }
             }
@@ -30,10 +31,10 @@ namespace Localization.Helpers {
                 for (var i = 0; i < height; i++) {
                     for (var j = 0; j < width; j++) {
                         if (i == 0 || i == (height - 1) || j == 0 || j == (width - 1)) {
-                            mapTable[i, j] = '#';
+                            mapTable[i, j] = ApplicationSettings.WallMapCharacter;
                         }
                         else {
-                            mapTable[i, j] = ' ';
+                            mapTable[i, j] = ApplicationSettings.EmptyMapCharacter;
                         }
                     }
                 }
