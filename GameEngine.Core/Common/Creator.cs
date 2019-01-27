@@ -2,7 +2,7 @@
 using System.Text;
 using GameEngine.Core.Helpers;
 
-namespace Localization.Helpers {
+namespace GameEngine.Core.Common {
 
     /// <summary>
     ///     Class for generating locations

@@ -2,6 +2,6 @@
 
 namespace GameEngine.Core.MainClasses {
     public class ItemOnTheGround : Item {
-        public Coordinates CurrentCoordinates { get; set; }
+        public Coordinates Coordinates { get; set; }
     }
 }

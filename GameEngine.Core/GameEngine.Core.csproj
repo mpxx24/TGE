@@ -41,6 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Coordinates.cs" />
+    <Compile Include="Common\Creator.cs" />
+    <Compile Include="Common\Direction.cs" />
+    <Compile Include="Common\Map.cs" />
+    <Compile Include="Common\MapUpdater.cs" />
+    <Compile Include="Exceptions\FailedToUpdateMapException.cs" />
     <Compile Include="Helpers\ApplicationSettings.cs" />
     <Compile Include="Helpers\ItemRarity.cs" />
     <Compile Include="Interfaces\ICharacters.cs" />

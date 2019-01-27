@@ -56,10 +56,6 @@
       <Project>{48CDEE5E-D502-44C4-BDA9-EF23062926BD}</Project>
       <Name>GameEngine.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Localization\Localization.csproj">
-      <Project>{79f45d73-ace4-47c8-b7ac-74f89bd4b52d}</Project>
-      <Name>Localization</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

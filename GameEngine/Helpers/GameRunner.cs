@@ -2,7 +2,6 @@
 using System.Threading;
 using GameEngine.Core.Common;
 using GameEngine.Core.MainClasses;
-using Localization.Helpers;
 
 namespace GameEngine.Helpers {
     public class GameRunner {
@@ -26,21 +25,20 @@ namespace GameEngine.Helpers {
                     switch (key) {
                         case ConsoleKey.UpArrow:
                             map = MapUpdater.MoveCharacter(map, Direction.Up, mainCharacter.ShortName);
-                            UpdateMap(map);
                             break;
                         case ConsoleKey.DownArrow:
                             map = MapUpdater.MoveCharacter(map, Direction.Down, mainCharacter.ShortName);
-                            UpdateMap(map);
                             break;
                         case ConsoleKey.LeftArrow:
                             map = MapUpdater.MoveCharacter(map, Direction.Left, mainCharacter.ShortName);
-                            UpdateMap(map);
                             break;
                         case ConsoleKey.RightArrow:
                             map = MapUpdater.MoveCharacter(map, Direction.Right, mainCharacter.ShortName);
-                            UpdateMap(map);
                             break;
                     }
+
+                    map = enemy.ChaseCharacter(map, mainCharacter.ShortName);
+                    UpdateMap(map);
                 }
             } while (Console.ReadKey(true).Key != ConsoleKey.Escape);
         }

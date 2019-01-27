@@ -1,4 +1,4 @@
-﻿namespace Localization.Helpers {
+﻿namespace GameEngine.Core.Common {
     public enum Direction {
         Up = 0,
         Down = 1,
